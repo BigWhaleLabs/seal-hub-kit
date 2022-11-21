@@ -1,0 +1,30 @@
+import { ExtendedBasePoint } from '../models/ExtendedBasePoint'
+import { splitToRegisters } from './splitToRegisters'
+import * as BN from 'bn.js'
+import { NUM_STRIDES, secp256k1, STRIDE } from './constants'
+
+export function getPointPreComputes(point: ExtendedBasePoint) {
+  const keyPoint = secp256k1.keyFromPublic({
+    x: Buffer.from(point.x.toString(16), 'hex').toString('hex'),
+    y: Buffer.from(point.y.toString(16), 'hex').toString('hex'),
+  })
+
+  const gPowers = [] as (bigint[] | string[])[][][]
+  for (let i = 0n; i < NUM_STRIDES; i++) {
+    const stride: (bigint[] | string[])[][] = []
+    const power = 2n ** (i * STRIDE)
+    for (let j = 0n; j < 2n ** STRIDE; j++) {
+      const l = j * power
+
+      const gPower = keyPoint
+        .getPublic()
+        .mul(new BN(l.toString())) as ExtendedBasePoint
+      const x = splitToRegisters(gPower.x)
+      const y = splitToRegisters(gPower.y)
+      stride.push([x, y])
+    }
+    gPowers.push(stride)
+  }
+
+  return gPowers
+}

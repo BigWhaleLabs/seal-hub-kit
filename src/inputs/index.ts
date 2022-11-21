@@ -1,0 +1,7 @@
+export * from './addHexPrefix'
+export * from './generateCommitment'
+export * from './generateSignatureInputs'
+export * from './getPointPreComputes'
+export * from './publicKeyToArraysSplitted'
+export * from './splitToRegisters'
+export * from './generateMerkleTreeInputs'
