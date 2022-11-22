@@ -1,27 +1,16 @@
-import { publicKeyToArraysSplitted } from './publicKeyToArraysSplitted'
-import { Mimc7 } from '../models/Mimc7'
-import { REGISTERS } from './constants'
-import { CommitmentInput } from '../models/SignatureInput'
+import { recoverPublicKey } from '@ethersproject/signing-key'
+import { utils } from 'ethers'
+import { generateCommitment } from './generateCommitmentByInput'
+import { generateSignatureInputs } from './generateSignatureInputs'
 
-export async function generateCommitment(
-  inputs: CommitmentInput,
-  publicKey: string
+export async function generateCommitmentBySignature(
+  signature: string,
+  message: string
 ) {
-  const k = Number(REGISTERS)
-  const prepHash: (string | bigint)[] = []
+  const signatureInputs = await generateSignatureInputs(signature, message)
+  const msgHash = utils.hashMessage(message)
+  const msgHashBytes = utils.arrayify(msgHash)
+  const publicKey = recoverPublicKey(msgHashBytes, signature)
 
-  const [x, y] = publicKeyToArraysSplitted(publicKey)
-
-  for (let i = 0; i < k; i++) {
-    prepHash[i] = inputs.s[0][i]
-    prepHash[k + i] = inputs.U[0][i]
-    prepHash[2 * k + i] = inputs.U[1][i]
-    prepHash[3 * k + i] = x[i]
-    prepHash[4 * k + i] = y[i]
-  }
-
-  const hashInput = prepHash.flat().map((v) => BigInt(v))
-  const mimc7 = await new Mimc7().prepare()
-
-  return mimc7.hash(hashInput)
+  return generateCommitment(signatureInputs, publicKey)
 }
