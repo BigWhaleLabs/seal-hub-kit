@@ -12,7 +12,7 @@ export async function generateInputs(
   message: string,
   provider: Provider
 ) {
-  const signatureInputs = await generateSignatureInputs(signature, message)
+  const signatureInputs = generateSignatureInputs(signature, message)
   const msgHash = utils.hashMessage(message)
   const msgHashBytes = utils.arrayify(msgHash)
   const publicKey = recoverPublicKey(msgHashBytes, signature)

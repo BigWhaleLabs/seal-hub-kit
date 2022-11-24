@@ -8,7 +8,7 @@ export async function generateCommitmentByInput(
   publicKey: string
 ) {
   const k = Number(REGISTERS)
-  const prepHash: (string | bigint)[] = []
+  const prepHash: string[] = []
 
   const [x, y] = publicKeyToArraysSplitted(publicKey)
 

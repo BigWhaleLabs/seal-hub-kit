@@ -54,6 +54,7 @@
   },
   "packageManager": "yarn@3.2.3",
   "dependencies": {
+    "@big-whale-labs/constants": "^0.1.38",
     "@big-whale-labs/seal-hub-contract": "^0.1.0",
     "@ethereumjs/util": "^8.0.2",
     "@zk-kit/incremental-merkle-tree": "^1.0.0",
