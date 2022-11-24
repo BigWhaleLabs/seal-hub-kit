@@ -21,10 +21,9 @@
     "start": "tsc-watch --skipLibCheck --onSuccess 'node dist/index.js'",
     "build": "tsc --skipLibCheck",
     "release": "np --any-branch",
-    "test": "jest",
     "pretty": "prettier --check src",
     "lint": "yarn pretty && eslint --max-warnings 0 --ext ts,tsx,json src",
-    "prepublishOnly": "yarn lint && yarn build && yarn test"
+    "prepublishOnly": "yarn lint && yarn build"
   },
   "devDependencies": {
     "@types/elliptic": "^6.4.14",
