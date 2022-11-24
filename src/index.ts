@@ -1,2 +1,2 @@
 export { generateInputs, generateCommitment } from './inputs'
-export { hasCommitment } from './helpers'
+export { hasCommitment, createMessage } from './helpers'
