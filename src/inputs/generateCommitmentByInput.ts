@@ -3,7 +3,7 @@ import { Mimc7 } from '../models/Mimc7'
 import { REGISTERS } from './constants'
 import { CommitmentInput } from '../models/SignatureInput'
 
-export async function generateCommitment(
+export async function generateCommitmentByInput(
   inputs: CommitmentInput,
   publicKey: string
 ) {

@@ -3,7 +3,7 @@ import { recoverPublicKey } from '@ethersproject/signing-key'
 import { utils } from 'ethers'
 import { hasCommitment } from '../helpers/hasCommitment'
 import { fetchCommitments } from '../helpers/fetchCommitments'
-import { generateCommitment } from './generateCommitmentByInput'
+import { generateCommitmentByInput } from './generateCommitmentByInput'
 import { generateMerkleTreeInputs } from './generateMerkleTreeInputs'
 import { generateSignatureInputs } from './generateSignatureInputs'
 
@@ -16,7 +16,7 @@ export async function generateInputs(
   const msgHash = utils.hashMessage(message)
   const msgHashBytes = utils.arrayify(msgHash)
   const publicKey = recoverPublicKey(msgHashBytes, signature)
-  const commitment = await generateCommitment(signatureInputs, publicKey)
+  const commitment = await generateCommitmentByInput(signatureInputs, publicKey)
 
   if (!(await hasCommitment(commitment, provider)))
     throw new Error(`Commitment: ${commitment} not found in SealHub!`)
@@ -31,5 +31,6 @@ export async function generateInputs(
   return {
     ...signatureInputs,
     ...merkleTreeInputs,
+    commitmentMerkleRootIndex: commitments.length - 1,
   }
 }

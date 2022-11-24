@@ -1,2 +1,2 @@
-export { generateInputs, generateCommitmentBySignature } from './inputs'
+export { generateInputs, generateCommitment } from './inputs'
 export { hasCommitment } from './helpers'

@@ -1,4 +1,3 @@
-import { SealHub__factory } from '@big-whale-labs/seal-hub-contract'
 import { Provider } from '@ethersproject/abstract-provider'
 import { utils } from 'ethers'
 import { createHub } from './sealHub'
