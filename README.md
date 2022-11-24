@@ -1,6 +1,6 @@
 # Seal Hub Kit
 
-## Available methods
+## Available functions
 
 ### `generateInputs(signature: string, message: string, provider: Provider)`
 
