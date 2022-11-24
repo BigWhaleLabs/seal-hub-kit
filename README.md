@@ -27,6 +27,8 @@ Generates an input to create a zk proof
 ```
 {
   commitmentMerkleRootIndex: number
+  pathIndices: number[]
+  siblings: string[]
   TPreComputes: string[][][][]
   U: string[][]
   s: string[][]
@@ -46,6 +48,26 @@ const message = createMessage(wallet.address)
 const signature = wallet.signMessage(message)
 
 const zkInput = generateInputs(signature, message, provider)
+```
+
+### `generateSignatureInputs(signature: string, message: string)`
+
+Generates an input to create a commitment's zk proof
+
+**Parameters**
+
+- `message: string` — a message created using the `createMessage(wallet.address)` function
+- `signature: string` — signature made by `wallet.signMessage(message)`
+
+**Returns**
+
+```
+{
+  TPreComputes: string[][][][]
+  U: string[][]
+  s: string[][]
+  r: string[][]
+}
 ```
 
 ### `generateCommitment(signature: string, message: string) => string`
