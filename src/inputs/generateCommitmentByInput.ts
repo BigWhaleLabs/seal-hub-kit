@@ -1,7 +1,7 @@
-import { publicKeyToArraysSplitted } from '../helpers/publicKeyToArraysSplitted'
+import { CommitmentInput } from '../models/SignatureInput'
 import { Mimc7 } from '../models/Mimc7'
 import { REGISTERS } from './constants'
-import { CommitmentInput } from '../models/SignatureInput'
+import { publicKeyToArraysSplitted } from '../helpers/publicKeyToArraysSplitted'
 
 export async function generateCommitmentByInput(
   inputs: CommitmentInput,

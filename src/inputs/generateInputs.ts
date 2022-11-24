@@ -1,11 +1,11 @@
 import { Provider } from '@ethersproject/abstract-provider'
-import { recoverPublicKey } from '@ethersproject/signing-key'
-import { utils } from 'ethers'
-import { hasCommitment } from '../helpers/hasCommitment'
 import { fetchCommitments } from '../helpers/fetchCommitments'
 import { generateCommitmentByInput } from './generateCommitmentByInput'
 import { generateMerkleTreeInputs } from './generateMerkleTreeInputs'
 import { generateSignatureInputs } from './generateSignatureInputs'
+import { hasCommitment } from '../helpers/hasCommitment'
+import { recoverPublicKey } from '@ethersproject/signing-key'
+import { utils } from 'ethers'
 
 export async function generateInputs(
   signature: string,

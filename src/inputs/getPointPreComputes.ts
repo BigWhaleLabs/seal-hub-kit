@@ -1,7 +1,7 @@
-import { ExtendedBasePoint } from '../models/ExtendedBasePoint'
-import { splitToRegisters } from './splitToRegisters'
 import * as BN from 'bn.js'
-import { NUM_STRIDES, secp256k1, STRIDE } from './constants'
+import { ExtendedBasePoint } from '../models/ExtendedBasePoint'
+import { NUM_STRIDES, STRIDE, secp256k1 } from './constants'
+import { splitToRegisters } from './splitToRegisters'
 
 export function getPointPreComputes(point: ExtendedBasePoint) {
   const keyPoint = secp256k1.keyFromPublic({

@@ -1,6 +1,6 @@
 import { Provider } from '@ethersproject/abstract-provider'
-import { utils } from 'ethers'
 import { createHub } from './sealHub'
+import { utils } from 'ethers'
 
 const transferEventInterface = new utils.Interface([
   `event CommitmentCreated(uint256 commitmentId, bytes32 merkleRoot)`,

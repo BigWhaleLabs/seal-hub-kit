@@ -82,6 +82,7 @@ __metadata:
     eslint-config-standard: ^17.0.0
     eslint-plugin-import: ^2.26.0
     eslint-plugin-n: ^15.4.0
+    eslint-plugin-no-relative-import-paths: ^1.5.0
     eslint-plugin-node: ^11.1.0
     eslint-plugin-prettier: ^4.2.1
     eslint-plugin-promise: ^6.1.1
@@ -2747,6 +2748,13 @@ __metadata:
   peerDependencies:
     eslint: ">=7.0.0"
   checksum: b97e547fd5429a564c84aace2803d82f4b031e0c4a8896fbe06ab2a116618d08e97435edd9f58e380771adc2ad43d53039e87fb0c91a007425a1ae412708714a
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-no-relative-import-paths@npm:^1.5.0":
+  version: 1.5.0
+  resolution: "eslint-plugin-no-relative-import-paths@npm:1.5.0"
+  checksum: 812fb801b4bfe4bd93199cd9eae572ae356009cf2421f4553902421167f31ed47527eee2482ab350241fcef9256f3ecc717ac0cdf709347e7893107285727d2a
   languageName: node
   linkType: hard
 

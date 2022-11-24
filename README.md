@@ -34,7 +34,7 @@ const wallet = new Wallet()
 const message = `SealHub verification for ${wallet.address}`
 const signature = wallet.signMessage(message)
 
-generateInputs(signature, message, provider)
+const zkInput = generateInputs(signature, message, provider)
 ```
 
 ### `generateCommitment(signature: string, message: string) => string`
@@ -55,7 +55,7 @@ const wallet = new Wallet()
 const message = `SealHub verification for ${wallet.address}`
 const signature = wallet.signMessage(message)
 
-generateCommitment(signature, message)
+const commitment = generateCommitment(signature, message)
 ```
 
 ### `hasCommitment(commitment: string | bigint, provider: Provider) => boolean`
