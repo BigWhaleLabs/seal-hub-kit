@@ -1,5 +1,5 @@
-import { buildPoseidon } from 'circomlibjs'
 import { IncrementalMerkleTree } from '@zk-kit/incremental-merkle-tree'
+import { buildPoseidon } from 'circomlibjs'
 
 export async function generateTreeProof(
   commitment: bigint,

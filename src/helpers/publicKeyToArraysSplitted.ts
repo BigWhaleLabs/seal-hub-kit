@@ -1,6 +1,6 @@
 import * as BN from 'bn.js'
-import { addHexPrefix } from './addHexPrefix'
-import { splitToRegisters } from './splitToRegisters'
+import { addHexPrefix } from '../inputs/addHexPrefix'
+import { splitToRegisters } from '../inputs/splitToRegisters'
 
 export function publicKeyToArraysSplitted(publicKey: string) {
   const x = splitToRegisters(

@@ -1,15 +1,12 @@
-import { utils } from 'ethers'
-import { hashPersonalMessage } from '@ethereumjs/util'
 import * as BN from 'bn.js'
-import { splitToRegisters } from './splitToRegisters'
-import { getPointPreComputes } from './getPointPreComputes'
 import { ExtendedBasePoint } from '../models/ExtendedBasePoint'
-import { secp256k1, SECP256K1_N } from './constants'
+import { SECP256K1_N, secp256k1 } from './constants'
+import { getPointPreComputes } from './getPointPreComputes'
+import { hashPersonalMessage } from '@ethereumjs/util'
+import { splitToRegisters } from './splitToRegisters'
+import { utils } from 'ethers'
 
-export async function generateSignatureInputs(
-  signature: string,
-  message: string
-) {
+export function generateSignatureInputs(signature: string, message: string) {
   const msgHash = hashPersonalMessage(Buffer.from(message))
   const { v, r, s } = utils.splitSignature(signature)
 

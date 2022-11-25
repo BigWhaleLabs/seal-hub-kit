@@ -10,8 +10,6 @@
     "project": "./tsconfig.json"
   },
   "plugins": [
-    "react",
-    "react-hooks",
     "@typescript-eslint",
     "prettier",
     "sort-imports-es6-autofix",
@@ -20,7 +18,6 @@
   ],
   "extends": [
     "eslint:recommended",
-    "plugin:react/jsx-runtime",
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended"
   ],
@@ -28,7 +25,6 @@
     "import/newline-after-import": ["error"],
     "@typescript-eslint/no-floating-promises": "error",
     "require-await": "error",
-    "react-hooks/exhaustive-deps": "error",
     "prettier/prettier": [
       "error",
       {
