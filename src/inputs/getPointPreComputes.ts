@@ -5,8 +5,12 @@ import { splitToRegisters } from './splitToRegisters'
 
 export function getPointPreComputes(point: ExtendedBasePoint) {
   const keyPoint = secp256k1.keyFromPublic({
-    x: Buffer.from(point.x.toString(16), 'hex').toString('hex'),
-    y: Buffer.from(point.y.toString(16), 'hex').toString('hex'),
+    x: Buffer.from(point.x.toString(16).padStart(32, '0'), 'hex').toString(
+      'hex'
+    ),
+    y: Buffer.from(point.y.toString(16).padStart(32, '0'), 'hex').toString(
+      'hex'
+    ),
   })
 
   const gPowers = [] as string[][][][]
