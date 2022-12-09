@@ -1,4 +1,5 @@
 export { getSealHubValidatorInputs } from './zk-inputs/getSealHubValidatorInputs'
+export { getSealHubInputs } from './zk-inputs/getSealHubInputs'
 
 export { getCommitmentFromSignature } from './commitments/getCommitmentFromSignature'
 export { isCommitmentRegistered } from './commitments/isCommitmentRegistered'
