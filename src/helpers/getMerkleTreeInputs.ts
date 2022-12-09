@@ -2,8 +2,8 @@ import { BigNumber } from 'ethers'
 import { getMerkleTreeProof } from './getMerkleTreeProof'
 
 export async function getMerkleTreeInputs(
-  commitment: bigint,
-  commitments: bigint[]
+  commitment: bigint | string,
+  commitments: (bigint | string)[]
 ) {
   const proof = await getMerkleTreeProof(commitment, commitments)
 

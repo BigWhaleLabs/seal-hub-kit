@@ -2,8 +2,8 @@ import { IncrementalMerkleTree } from '@zk-kit/incremental-merkle-tree'
 import { buildPoseidon } from 'circomlibjs'
 
 export async function getMerkleTreeProof(
-  commitment: bigint,
-  commitments: bigint[]
+  commitment: bigint | string,
+  commitments: (bigint | string)[]
 ) {
   const poseidon = await buildPoseidon()
   const F = poseidon.F
