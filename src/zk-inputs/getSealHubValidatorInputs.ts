@@ -2,7 +2,7 @@ import { Provider } from '@ethersproject/abstract-provider'
 import { fetchAllCommitments } from '../helpers/fetchAllCommitments'
 import { getCommitmentFromPrecommitment } from '../commitments/getCommitmentFromPrecommitment'
 import { getMerkleTreeInputs } from '../helpers/getMerkleTreeInputs'
-import { getPrecomputesFromSignature } from '../helpers/getPrecomputesFromSignature'
+import { getPrecomputesFromSignature } from '../helpers/getTPreComputesFromSignature'
 import { isCommitmentRegistered } from '../commitments/isCommitmentRegistered'
 import { utils } from 'ethers'
 
