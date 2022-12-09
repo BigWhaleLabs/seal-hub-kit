@@ -2,7 +2,6 @@ import { Provider } from '@ethersproject/abstract-provider'
 import { fetchAllCommitments } from '../helpers/fetchAllCommitments'
 import { getCommitmentFromPrecommitment } from '../commitments/getCommitmentFromPrecommitment'
 import { getMerkleTreeInputs } from '../helpers/getMerkleTreeInputs'
-import { getTPreComputesFromSignature } from '../helpers/getTPreComputesFromSignature'
 import { getUAndSFromSignature } from '..'
 import { isCommitmentRegistered } from '../commitments/isCommitmentRegistered'
 import { utils } from 'ethers'
@@ -22,11 +21,8 @@ export async function getSealHubValidatorInputs(
   // Fetch all commitments and construct the Merkle tree
   const commitments = await fetchAllCommitments(provider)
   const merkleTreeInputs = await getMerkleTreeInputs(commitment, commitments)
-  // Get precomputes
-  const precomputes = getTPreComputesFromSignature(signature)
   // Return the result
   return {
-    ...precomputes,
     U,
     s,
     ...merkleTreeInputs,
