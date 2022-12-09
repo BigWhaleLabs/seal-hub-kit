@@ -1,11 +1,11 @@
 import { BigNumber } from 'ethers'
-import { generateTreeProof } from './generateTreeProof'
+import { getMerkleTreeProof } from './getMerkleTreeProof'
 
-export async function generateMerkleTreeInputs(
+export async function getMerkleTreeInputs(
   commitment: bigint,
   commitments: bigint[]
 ) {
-  const proof = await generateTreeProof(commitment, commitments)
+  const proof = await getMerkleTreeProof(commitment, commitments)
 
   return {
     pathIndices: proof.pathIndices,

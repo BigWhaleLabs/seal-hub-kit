@@ -1,6 +1,9 @@
 import * as BN from 'bn.js'
 import { REGISTERS } from './constants'
-import { addHexPrefix } from './addHexPrefix'
+
+function addHexPrefix(str: string) {
+  return `0x${str}`
+}
 
 export function splitToRegisters(value?: BN | string) {
   const registers = [] as bigint[]

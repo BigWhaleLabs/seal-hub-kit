@@ -1,5 +1,5 @@
 import { Provider } from '@ethersproject/abstract-provider'
-import { createHub } from './sealHub'
+import { connectSealHub } from './connectSealHub'
 import { utils } from 'ethers'
 
 const transferEventInterface = new utils.Interface([
@@ -16,8 +16,8 @@ function parsePostLogData({
   return transferEventInterface.parseLog({ data, topics })
 }
 
-export async function fetchCommitments(provider: Provider) {
-  const sealHub = createHub(provider)
+export async function fetchAllCommitments(provider: Provider) {
+  const sealHub = connectSealHub(provider)
 
   const transactions = await sealHub.queryFilter(
     sealHub.filters.CommitmentCreated()

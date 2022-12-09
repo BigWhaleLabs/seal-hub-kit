@@ -3,7 +3,7 @@ import { ExtendedBasePoint } from '../models/ExtendedBasePoint'
 import { NUM_STRIDES, STRIDE, secp256k1 } from './constants'
 import { splitToRegisters } from './splitToRegisters'
 
-export function getPointPreComputes(point: ExtendedBasePoint) {
+export function getPointPrecomputes(point: ExtendedBasePoint) {
   const keyPoint = secp256k1.keyFromPublic({
     x: Buffer.from(point.x.toString(16).padStart(64, '0'), 'hex').toString(
       'hex'
@@ -12,7 +12,6 @@ export function getPointPreComputes(point: ExtendedBasePoint) {
       'hex'
     ),
   })
-
   const gPowers = [] as string[][][][]
   for (let i = 0n; i < NUM_STRIDES; i++) {
     const stride: string[][][] = []
@@ -29,6 +28,5 @@ export function getPointPreComputes(point: ExtendedBasePoint) {
     }
     gPowers.push(stride)
   }
-
   return gPowers
 }
