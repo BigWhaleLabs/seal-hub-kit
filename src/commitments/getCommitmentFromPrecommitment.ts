@@ -9,7 +9,7 @@ export async function getCommitmentFromPrecommitment(
   const prepHash: (string | bigint)[] = []
 
   for (let i = 0; i < k; i++) {
-    prepHash[i] = precommitment.s[0][i]
+    prepHash[i] = precommitment.s[i]
     prepHash[k + i] = precommitment.U[0][i]
     prepHash[2 * k + i] = precommitment.U[1][i]
   }

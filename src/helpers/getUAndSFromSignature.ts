@@ -14,6 +14,6 @@ export function getUAndSFromSignature(signature: string, message: string) {
   const U = secp256k1.curve.g.mul(w)
   return {
     U: [splitToRegisters(U.x), splitToRegisters(U.y)],
-    s: [splitToRegisters(hexS)],
+    s: splitToRegisters(hexS),
   }
 }
