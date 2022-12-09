@@ -25,6 +25,7 @@ export async function getSealHubValidatorInputs(
   return {
     U,
     s,
+    address,
     ...merkleTreeInputs,
     commitmentMerkleRootIndex: commitments.length - 1,
   }
