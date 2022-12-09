@@ -12,5 +12,6 @@ export { Mimc7 } from './helpers/Mimc7'
 export { fetchAllCommitments } from './helpers/fetchAllCommitments'
 export { connectSealHub } from './helpers/connectSealHub'
 export { getMerkleTreeInputs } from './helpers/getMerkleTreeInputs'
+export { getMerkleTreeProof } from './helpers/getMerkleTreeProof'
 
 export { Precommitment } from './models/Precommitment'
