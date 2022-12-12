@@ -7,7 +7,8 @@
     "url": "git+https://github.com/BigWhaleLabs/seal-hub-kit"
   },
   "files": [
-    "dist"
+    "dist",
+    "contracts/**/*.sol"
   ],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -20,6 +21,7 @@
   "scripts": {
     "start": "tsc-watch --skipLibCheck --onSuccess 'node dist/index.js'",
     "build": "tsc --skipLibCheck",
+    "build:contract": "yarn hardhat clean && yarn hardhat compile",
     "release": "np --any-branch",
     "pretty": "prettier --check src",
     "lint": "yarn pretty && eslint --max-warnings 0 --ext ts,tsx,json src",
@@ -42,6 +44,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-sort-imports-es6-autofix": "^0.6.0",
+    "hardhat": "^2.12.4",
     "np": "^7.6.2",
     "prettier": "^2.8.0",
     "ts-node": "^10.9.1",
@@ -54,7 +57,7 @@
   "packageManager": "yarn@3.3.0",
   "dependencies": {
     "@big-whale-labs/constants": "^0.1.39",
-    "@big-whale-labs/seal-hub-contract": "^0.1.0",
+    "@big-whale-labs/seal-hub-contract": "^0.0.6",
     "@ethereumjs/util": "^8.0.2",
     "@zk-kit/incremental-merkle-tree": "^1.0.0",
     "bn.js": "^5.2.1",
