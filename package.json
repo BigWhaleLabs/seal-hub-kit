@@ -20,8 +20,8 @@
   },
   "scripts": {
     "start": "tsc-watch --skipLibCheck --onSuccess 'node dist/index.js'",
-    "build": "tsc --skipLibCheck",
-    "build:contract": "yarn hardhat clean && yarn hardhat compile",
+    "build": "tsc --skipLibCheck && yarn build-contract",
+    "build-contract": "yarn hardhat clean && yarn hardhat compile",
     "release": "np --any-branch",
     "pretty": "prettier --check src",
     "lint": "yarn pretty && eslint --max-warnings 0 --ext ts,tsx,json src",
