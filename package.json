@@ -10,8 +10,8 @@
     "dist",
     "contracts/**/*.sol"
   ],
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
   "np": {
     "2fa": false,
     "tests": false,
@@ -19,7 +19,7 @@
     "yarn": false
   },
   "scripts": {
-    "start": "tsc-watch --skipLibCheck --onSuccess 'node dist/index.js'",
+    "start": "tsc-watch --skipLibCheck --onSuccess 'node dist/src/index.js'",
     "build": "tsc --skipLibCheck && yarn build-contract",
     "build-contract": "yarn hardhat clean && yarn hardhat compile",
     "release": "np --any-branch",
