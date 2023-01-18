@@ -5,7 +5,7 @@ export { getCommitmentFromPrecommitment } from './commitments/getCommitmentFromP
 export { getCommitmentFromSignature } from './commitments/getCommitmentFromSignature'
 export { isCommitmentRegistered } from './commitments/isCommitmentRegistered'
 
-export { getTPreComputesFromSignature } from './helpers/getTPreComputesFromSignature'
+export { getTPrecomputesFromSignature } from './helpers/getTPrecomputesFromSignature'
 export { getUAndSFromSignature } from './helpers/getUAndSFromSignature'
 export { getMessageForAddress } from './helpers/getMessageForAddress'
 export { Mimc7 } from './helpers/Mimc7'

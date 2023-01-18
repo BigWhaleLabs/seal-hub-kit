@@ -2,9 +2,10 @@ import * as BN from 'bn.js'
 import { ExtendedBasePoint } from '../models/ExtendedBasePoint'
 import { SECP256K1_N, secp256k1 } from './constants'
 import { getPointPrecomputes } from './getPointPrecomputes'
+import { splitToRegisters } from './splitToRegisters'
 import { utils } from 'ethers'
 
-export function getTPreComputesFromSignature(signature: string) {
+export function getTPrecomputesFromSignature(signature: string) {
   const { v, r } = utils.splitSignature(signature)
   const biV = BigInt(v)
   const biR = new BN(r.slice(2, r.length), 'hex')
@@ -15,8 +16,10 @@ export function getTPreComputesFromSignature(signature: string) {
   )
   const rInv = new BN(biR).invm(SECP256K1_N)
   const T = rPoint.getPublic().mul(rInv) as ExtendedBasePoint
-  const TPreComputes = getPointPrecomputes(T)
+  const rPointPublic = rPoint.getPublic() as ExtendedBasePoint
+  const TPrecomputes = getPointPrecomputes(T)
   return {
-    TPreComputes,
+    TPrecomputes,
+    T: [splitToRegisters(rPointPublic.x), splitToRegisters(rPointPublic.y)],
   }
 }
