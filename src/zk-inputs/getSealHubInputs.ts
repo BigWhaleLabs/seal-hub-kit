@@ -2,12 +2,18 @@ import { getTPrecomputesFromSignature } from '../helpers/getTPrecomputesFromSign
 import { getUAndSFromSignature } from '../helpers/getUAndSFromSignature'
 
 export function getSealHubInputs(signature: string, message: string) {
-  const { U, s } = getUAndSFromSignature(signature, message)
-  const { TPrecomputes } = getTPrecomputesFromSignature(signature)
+  const { U, s, scalarForT, scalarForU } = getUAndSFromSignature(
+    signature,
+    message
+  )
+  const { TPrecomputes, T } = getTPrecomputesFromSignature(signature)
   // Return the result
   return {
-    TPrecomputes,
     U,
     s,
+    scalarForT,
+    TPrecomputes,
+    T,
+    scalarForU,
   }
 }
