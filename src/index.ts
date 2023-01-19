@@ -7,7 +7,7 @@ export { isCommitmentRegistered } from './commitments/isCommitmentRegistered'
 
 export { getTPrecomputesFromSignature } from './helpers/getTPrecomputesFromSignature'
 export { getUAndSFromSignature } from './helpers/getUAndSFromSignature'
-export { getMessageForAddress } from './helpers/getMessageForAddress'
+export { getMessage } from './helpers/getMessage'
 export { Mimc7 } from './helpers/Mimc7'
 export { fetchAllCommitments } from './helpers/fetchAllCommitments'
 export { connectSealHub } from './helpers/connectSealHub'
