@@ -39,10 +39,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@big-whale-labs/constants@npm:^0.1.51":
-  version: 0.1.51
-  resolution: "@big-whale-labs/constants@npm:0.1.51"
-  checksum: 624d7ecfbd5fa3a9fb66d2c5c14f01166934517a78b7339857bfec2c59a696026ce7bc3d1179af420f144968d72d48ff36773ceba3b6c911bf94780a2f8444d7
+"@big-whale-labs/constants@npm:^0.1.52":
+  version: 0.1.52
+  resolution: "@big-whale-labs/constants@npm:0.1.52"
+  checksum: 964b529409d9184c782806d4409353d08d545140443875808437180059ade7fd21955149f2c627f8ee0fa8b6ffc1d94b48da32912a0a92513987090d759d85f4
   languageName: node
   linkType: hard
 
@@ -72,7 +72,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@big-whale-labs/seal-hub-kit@workspace:."
   dependencies:
-    "@big-whale-labs/constants": ^0.1.51
+    "@big-whale-labs/constants": ^0.1.52
     "@big-whale-labs/seal-hub-contract": ^0.0.7
     "@ethereumjs/util": ^8.0.3
     "@types/elliptic": ^6.4.14
