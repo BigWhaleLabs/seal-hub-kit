@@ -15,7 +15,6 @@ export function getUAndSFromSignature(signature: string, message: string) {
   return {
     U: [splitToRegisters(U.x), splitToRegisters(U.y)],
     s: splitToRegisters(hexS),
-    scalarForT: splitToRegisters(biR),
     scalarForU: splitToRegisters(w),
     rInv: splitToRegisters(rInv),
   }
