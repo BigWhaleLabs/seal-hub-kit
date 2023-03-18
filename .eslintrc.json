@@ -13,8 +13,7 @@
     "@typescript-eslint",
     "prettier",
     "sort-imports-es6-autofix",
-    "import",
-    "no-relative-import-paths"
+    "import"
   ],
   "extends": [
     "eslint:recommended",
