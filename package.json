@@ -52,7 +52,7 @@
   },
   "packageManager": "yarn@3.5.0",
   "dependencies": {
-    "@big-whale-labs/constants": "^0.1.78",
+    "@big-whale-labs/constants": "^0.1.82",
     "@big-whale-labs/seal-hub-contract": "^0.0.9",
     "@ethereumjs/util": "^8.0.5",
     "@zk-kit/incremental-merkle-tree": "^1.0.0",
