@@ -53,12 +53,17 @@
   "packageManager": "yarn@3.5.0",
   "dependencies": {
     "@big-whale-labs/constants": "^0.1.82",
-    "@big-whale-labs/seal-hub-contract": "^0.0.9",
+    "@big-whale-labs/seal-hub-contract": "^0.0.12",
     "@ethereumjs/util": "^8.0.5",
     "@zk-kit/incremental-merkle-tree": "^1.0.0",
     "bn.js": "^5.2.1",
     "circomlibjs": "^0.1.7",
     "elliptic": "^6.5.4",
     "ethers": "^5.7.2"
+  },
+  "resolutions": {
+    "@opengsn/provider": "3.0.0-beta.3",
+    "@opengsn/contracts": "3.0.0-beta.3",
+    "@opengsn/common": "3.0.0-beta.3"
   }
 }
