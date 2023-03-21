@@ -32,10 +32,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@big-whale-labs/constants@npm:^0.1.82":
-  version: 0.1.82
-  resolution: "@big-whale-labs/constants@npm:0.1.82"
-  checksum: b6d13cd7447c46d4a96ada30c6e4078b84dbc0b57ba2bc1b716a41b9c4cf0b42ddfc569886dbecdcf4392e187e3c02cde442a789d261c4ca1f5ebdb325a7545e
+"@big-whale-labs/constants@npm:^0.1.83":
+  version: 0.1.83
+  resolution: "@big-whale-labs/constants@npm:0.1.83"
+  checksum: fff261bdfb90b1e18ea2b5d1160e45b6c35ec085d04a3ae025419de6b897f4b5cd1086823925c818c072e2248f6c03ca3886e24787127f3d0ae20c3bac15db5e
   languageName: node
   linkType: hard
 
@@ -48,16 +48,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@big-whale-labs/seal-hub-contract@npm:^0.0.12":
-  version: 0.0.12
-  resolution: "@big-whale-labs/seal-hub-contract@npm:0.0.12"
+"@big-whale-labs/seal-hub-contract@npm:^0.0.13":
+  version: 0.0.13
+  resolution: "@big-whale-labs/seal-hub-contract@npm:0.0.13"
   dependencies:
     "@big-whale-labs/poseidon": ^0.0.5
     "@big-whale-labs/versioned-contract": ^1.0.2
     "@opengsn/contracts": 3.0.0-beta.3
     "@zk-kit/incremental-merkle-tree.sol": ^1.3.3
     circomlibjs: ^0.1.7
-  checksum: 579d596c7bd2e6fab5360f050bbc86f217ea49af87e8c07755d5ae1818f70f3883e9e416cfdff867b63edb218750291a123d86cfeedb99d127aa9e903cd4ff18
+  checksum: 1859fdc2c48b3854355e482ca801cb586a4db5576ab6175444601b39f166321c1dc42cddc78a0aa96b0451b8bc4a2822ffae91d545314c42502734938bf4d475
   languageName: node
   linkType: hard
 
@@ -65,8 +65,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@big-whale-labs/seal-hub-kit@workspace:."
   dependencies:
-    "@big-whale-labs/constants": ^0.1.82
-    "@big-whale-labs/seal-hub-contract": ^0.0.12
+    "@big-whale-labs/constants": ^0.1.83
+    "@big-whale-labs/seal-hub-contract": ^0.0.13
     "@ethereumjs/util": ^8.0.5
     "@types/elliptic": ^6.4.14
     "@types/node": ^18.15.3
