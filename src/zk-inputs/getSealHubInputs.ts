@@ -1,4 +1,4 @@
-import { getTPrecomputesFromSignature } from '../helpers/getTPrecomputesFromSignature'
+import { getTPrecomputesFromSignature } from '../helpers/getTPreComputesFromSignature'
 import { getUAndSFromSignature } from '../helpers/getUAndSFromSignature'
 
 export function getSealHubInputs(signature: string, message: string) {
